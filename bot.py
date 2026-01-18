@@ -13,10 +13,10 @@ supabase = create_client(
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndpdGVzcWRpZmx4bW5zeGVicmlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYzMjgzMDQsImV4cCI6MjA4MTkwNDMwNH0.QdHeB6ZbOt-IpA43Nchy5p6d2onv05pPb1XOj24OjW8"
 )
 
-TOKEN = "8244416237:AAHezGXRITlbKHsNQXFJIFWG2dNheB8gR70"
+TOKEN = os.environ.get("TELEGRAM_TOKEN")#"8244416237:AAHezGXRITlbKHsNQXFJIFWG2dNheB8gR70"
 bot = telebot.TeleBot(TOKEN)
 API_URL = "https://api.deepseek.com/v1/chat/completions"
-DEEPSEEK_KEY = "sk-06d469e0b76e41929d9fb8081b188907"#"sk-30e22cb3ff8e43cba5a0880105d431dc"
+DEEPSEEK_KEY = os.environ.get("DEEPSEEK_KEY")#"sk-b213b8ca95d241bc923d419185bcc530"#"sk-30e22cb3ff8e43cba5a0880105d431dc"
 app = Flask(__name__)
 
 MAX_TOKENS = 300
